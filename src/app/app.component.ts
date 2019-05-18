@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'haloSis';
+  public ready = "yes";
+  public cards = [
+  	{"nama":"haciko", "jenis":"anjing"},
+  	{"nama":"bleky", "jenis":"anjing"},
+  	{"nama":"kitty", "jenis":"kucing"},
+  	{"nama":"fixy", "jenis":"kucing"},
+  ];
 }
