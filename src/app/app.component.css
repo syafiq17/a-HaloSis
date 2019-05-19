@@ -17,13 +17,7 @@
   margin-bottom: 90px;
   padding-right: 10px;
   padding-left: 10px;
-}
-
-
-.card-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-  background-size: cover;
-}
+} 
 
 .loader {
   left: 50%;
@@ -39,3 +33,6 @@
   transform-origin: 50%;
 }
 
+.subsubMenu{
+  z-index: 1001;
+}

@@ -4,12 +4,16 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule, RoutingComponents} from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { TiketComponent } from './tiket/tiket.component';
-import { ChatComponent } from './chat/chat.component';
+// import { HomeComponent } from './home/home.component';
+// import { TiketComponent } from './tiket/tiket.component';
+// import { ChatComponent } from './chat/chat.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule} from './material/material.module';
-import { NotFoundComponent } from './not-found/not-found.component';
+// import { NotFoundComponent } from './not-found/not-found.component';
+import { TiketService} from "./tiket.service";
+import { ChatDetilComponent } from './chat-detil/chat-detil.component';
+// import { TiketDetilComponent } from './tiket-detil/tiket-detil.component';
+
 
 
 
@@ -18,7 +22,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
   declarations: [
     AppComponent,
     RoutingComponents,
-    NotFoundComponent
+    ChatDetilComponent,
+    // NotFoundComponent,
+    // TiketDetilComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +32,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     BrowserAnimationsModule,
     MaterialModule
   ],
+  // providers: [TiketService],
   providers: [],
   bootstrap: [AppComponent]
 })

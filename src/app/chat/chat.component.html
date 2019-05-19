@@ -1,3 +1,18 @@
-<p>
-  chat works!
-</p>
+<div *ngFor="let chat of chats">
+<mat-card (click)="onSelect(chat)" class="card" tabindex="0">
+    <mat-card-header>
+      <div mat-card-avatar class="card-header-image"></div>
+      <mat-card-title>{{chat.nomor}}</mat-card-title>
+      <mat-card-subtitle>{{chat.status}}</mat-card-subtitle>
+    </mat-card-header>
+    {{chat.last}}
+    <mat-card-content>
+      <p>
+        {{chat.tanggal}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-button>Reply</button>
+    </mat-card-actions>
+</mat-card>
+</div>

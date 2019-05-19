@@ -1,7 +1,17 @@
 <mat-toolbar color="primary" class="header1">
   <div>halosis Mobile</div>
-  <mat-button-toggle color="accent"><mat-icon class="submenu1">more_vert</mat-icon></mat-button-toggle>
+  <mat-button-toggle 
+  [matMenuTriggerFor]="subMenu"
+  
+  color="accent"><mat-icon class="submenu1">more_vert</mat-icon></mat-button-toggle>
 </mat-toolbar>
+
+<mat-menu #subMenu="matMenu" class="subsubMenu">
+  <div *ngFor="let sub of subs">
+  <button mat-menu-item>{{sub}}</button>
+    
+  </div>
+</mat-menu>
 
 <div class="main1" [ngSwitch]="ready">
 
