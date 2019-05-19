@@ -13,6 +13,7 @@ export class TiketDetilComponent implements OnInit {
 
 	public nomorTiket;
 	public detilTiket;
+  public threads = this.detilTiket.thread_entries;
 
   constructor(private route: ActivatedRoute,
   			private tService: TiketService) { }

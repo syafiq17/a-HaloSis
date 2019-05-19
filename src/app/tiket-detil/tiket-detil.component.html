@@ -17,7 +17,19 @@
 
 	     	<p>
 	     	Tanggal : 27/07/2019 (last massege/ tanggal terakhir tiket urus)
-	     	</p>	
+	     	</p>
+	     	<div>
+	     	<p>thread</p>
+	     	<div *ngFor "let thread of threads">
+	     		<mat-card-header>
+		    		<mat-card-title>{{thread.poster}}</mat-card-title>
+		    		<mat-card-subtitle>{{thread.created}}</mat-card-subtitle>
+		    	<mat-card-content>
+		    		{{thread.body}}
+		    	</mat-card-content>
+		    	</mat-card-header>
+	     	</div>
+	     	</div>
 	    </mat-card-content>
 	    <mat-card-actions align="end">
 	      <button mat-button>Open Tiket</button>
