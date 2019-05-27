@@ -6,33 +6,47 @@
 	<mat-card class="card">
 	    <mat-card-header>
 	      <div mat-card-avatar class="card-header-image"></div>
-	      <mat-card-title>nomor tiket</mat-card-title>
-	      <mat-card-subtitle>status tiket</mat-card-subtitle>
+	      <mat-card-title>{{detilTiket.ticket_number}}</mat-card-title>
+	      <mat-card-subtitle>{{detilTiket.ticket_status}}</mat-card-subtitle>
 	    </mat-card-header>
 	    <mat-card-content>
 	     	<p>
-	     	Jenis Tiket : Gangguan (tiket subject)	
+	     	<b>Jenis Tiket :</b> {{detilTiket.subject}} <!-- (tiket subject) -->	
 	     	</p>
-	     	
-
 	     	<p>
-	     	Tanggal : 27/07/2019 (last massege/ tanggal terakhir tiket urus)
+	     	<b>Departement :</b> {{detilTiket.department}} <!-- (tiket subject)	 -->
+	     	</p>
+	     	<p>
+	     	<b>Dibuat :</b> {{detilTiket.create_timestamp}} <!-- (tiket subject) -->	
+	     	</p>
+	     	<p>
+	     	<b>Tanggal :</b> {{detilTiket.last_message_timestamp}} <!-- (last massege/ tanggal terakhir tiket urus) -->
 	     	</p>
 	     	<div>
-	     	<p>thread</p>
-	     	<div *ngFor "let thread of threads">
+	     	<p></p>
+	     	<p>Thread</p>
+	     	<div *ngFor = "let thread of threads">
+	     		<mat-card class="card">
 	     		<mat-card-header>
-		    		<mat-card-title>{{thread.poster}}</mat-card-title>
-		    		<mat-card-subtitle>{{thread.created}}</mat-card-subtitle>
-		    	<mat-card-content>
-		    		{{thread.body}}
-		    	</mat-card-content>
+		    		<mat-card-title>{{thread.model.poster}}</mat-card-title>
+		    		<mat-card-subtitle>{{thread.model.created}}</mat-card-subtitle>
 		    	</mat-card-header>
+		    	<mat-card-content>
+		    		{{thread.model.body}}
+		    	</mat-card-content>
+		    	</mat-card>
 	     	</div>
 	     	</div>
 	    </mat-card-content>
-	    <mat-card-actions align="end">
-	      <button mat-button>Open Tiket</button>
+	    <mat-card-actions>
+	    	<!-- <input matInput type="text" placeholder="Reply..."> -->
+	    	<mat-form-field class="inPost-form-field">
+      			<input matInput type="text" placeholder="Type Post,,," [(ngModel)]="value">
+      			<button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+        			<mat-icon>close</mat-icon>
+      			</button>
+    		</mat-form-field>
+	      	<button mat-button (click)="postClick()" >Post Reply</button>
 	    </mat-card-actions>
 	</mat-card>	
 </div>

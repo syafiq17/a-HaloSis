@@ -15,6 +15,8 @@
 
 <div class="main1" [ngSwitch]="ready">
 
+<!-- <app-login></app-login> -->
+
   <div *ngSwitchCase="'yes'">
       <router-outlet></router-outlet>
   </div>
@@ -41,7 +43,6 @@
         </mat-card>
       </div>
   </div>
-
   </div>
   
   <div class="loader"  *ngSwitchCase="'no'"><mat-spinner id="spiner"></mat-spinner></div>

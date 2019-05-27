@@ -13,10 +13,14 @@ export class HomeComponent implements OnInit {
 	{"judul":"Hasil 1", "penyebab":"Kuota email dari si pengirim email telah penuh. Solusi 1: 1. Cek kuota dari si pengirim email, dengan cara mengarahkan kursor ke 'nama Anda' disebelah pojok kanan atas"},
 	{"judul":"Hasil 2", "penyebab":"Kuota email dari si pengirim email telah penuh. Solusi 1: 1. Cek kuota dari "}
 	];
+	public value = "";
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  onSearch(tipe){
+  	console.log(tipe);
+  }
 }

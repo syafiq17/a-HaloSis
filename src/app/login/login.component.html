@@ -1,0 +1,8 @@
+{{loginData | json}}
+<div class="login">
+<form #userLogin="ngForm" (submit)="submit()">
+  	<input matInput type="email" placeholder="username" name="username" [(ngModel)]="loginData.useremail" >
+  	<input matInput type="password" placeholder="password" name="pass" [(ngModel)]="loginData.password" >
+  	<input type="submit" value="Submit" >
+</form>
+</div>
