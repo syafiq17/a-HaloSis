@@ -17,7 +17,9 @@ import { ChatDetilComponent } from './chat-detil/chat-detil.component';
 // import { LoginComponent } from './login/login.component';
 // import { TiketDetilComponent } from './tiket-detil/tiket-detil.component';
 import { HttpClientModule} from '@angular/common/http' ;
-import { AuthService } from './auth.service' ;
+import { AuthService } from './auth.service';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment' ;
 
 
 
@@ -36,7 +38,8 @@ import { AuthService } from './auth.service' ;
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   // providers: [TiketService],
   providers: [AuthService],
