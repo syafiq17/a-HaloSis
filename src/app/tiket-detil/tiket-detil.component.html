@@ -33,20 +33,46 @@
 		    	</mat-card-header>
 		    	<mat-card-content>
 		    		{{thread.model.body}}
+		    		<div *ngIf="thread.annotations.has_attachments" >
+		    			<hr>
+		    			<a class="link" (click)="download(thread.annotations.url,thread.annotations.name)" >{{thread.annotations.name}}</a>
+		    			<small class="filesize faded">  {{thread.annotations.size}} bytes</small>
+		    			<!-- <p>{{(thread.annotations.url).substring((thread.annotations.url).search("?")+1)}}</p> -->
+		    		</div>
 		    	</mat-card-content>
 		    	</mat-card>
 	     	</div>
 	     	</div>
 	    </mat-card-content>
 	    <mat-card-actions>
-	    	<!-- <input matInput type="text" placeholder="Reply..."> -->
+	    	<div *ngIf="isStaff" >
+    		 	<mat-label>Respose</mat-label>
+    		 	<mat-select placeholder="Canned Respose" [(value)]="selectedRespon" (selectionChange)="responSelected($event)">
+    		 		<mat-option>None</mat-option>
+    		 		<mat-option value="original" >Original Message</mat-option>
+    		 		<mat-option value="lastmessage" >Last Message</mat-option>
+    		 		<mat-option disabled>---Premade Replies---</mat-option>
+      				<mat-option *ngFor="let response of persiapanTiket.responses" [value]="response.id">{{response.title}}</mat-option>
+    			</mat-select>
+    		</div>
 	    	<mat-form-field class="inPost-form-field">
       			<input matInput type="text" placeholder="Type Post,,," [(ngModel)]="value">
       			<button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
         			<mat-icon>close</mat-icon>
       			</button>
     		</mat-form-field>
+    		<!-- style="display:none" -->
+      		<input type="file" (change)="fileSelected($event)" #fileInput>
+      		<button mat-button (click)="fileInput.click()" > <mat-icon>attach_file</mat-icon> </button>
+    		<div *ngIf="isStaff" >
+    		 	<mat-label>Ticket Status</mat-label>
+    		 	<mat-select placeholder="Kategor Permasalhan" [(value)]="selectedStatus">
+      				<mat-option *ngFor="let status of persiapanTiket.status" [value]="status.id">{{status.name}}</mat-option>
+    			</mat-select>
+    		</div>
 	      	<button mat-button (click)="postClick()" >Post Reply</button>
 	    </mat-card-actions>
-	</mat-card>	
+	</mat-card>
+
+	<button mat-mini-fab class="bottomRight" (click)="scroll()" color="primary" ><mat-icon>arrow_downward</mat-icon></button>
 </div>

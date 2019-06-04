@@ -20,12 +20,12 @@ export class TiketComponent implements OnInit {
 
   ngOnInit() {
     // this.tikets = this.tService.getTiketInfo();
-    this.tService.getTiketInfo().subscribe(data=> this.tikets=data.tickets)
+    this.tService.getTiketInfo().subscribe(data=> this.tikets=data.tickets);
   }
 
   onSelect(tiket) {
     this.router.navigate([tiket.ticket_number],{relativeTo: this.route});
-    this.tService.getTiketServer().subscribe(data => console.log(data));
+    // this.tService.getTiketServer().subscribe(data => console.log(data));
     this.tService.setTiket([tiket])
   }
 

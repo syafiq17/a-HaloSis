@@ -1,0 +1,100 @@
+{
+  "configVersion": 1,
+  "timestamp": 1559654857998,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/es2015-polyfills.c5dd28b362270c767b34.js",
+        "/favicon.ico",
+        "/index.html",
+        "/main.f9e6e5618d0d63cc5db3.js",
+        "/polyfills.8bbb231b43165d65d357.js",
+        "/runtime.26209474bfa8dc87a77c.js",
+        "/styles.fdeecdd72bd8a2dba0b0.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/assets/data/auth.json",
+        "/assets/data/data_tiket.json",
+        "/assets/data/tiketByUser.json",
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/iconsss/icon-128x128.png",
+        "/assets/iconsss/icon-144x144.png",
+        "/assets/iconsss/icon-152x152.png",
+        "/assets/iconsss/icon-192x192.png",
+        "/assets/iconsss/icon-384x384.png",
+        "/assets/iconsss/icon-512x512.png",
+        "/assets/iconsss/icon-72x72.png",
+        "/assets/iconsss/icon-96x96.png",
+        "/assets/shiba1.jpg",
+        "/shiba1.d84e1a8ed94377452dbf.jpg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/data/auth.json": "45d9f833c9a8b288b4bd055fde5a8279c9f316f6",
+    "/assets/data/data_tiket.json": "1ba9aad82ddab6722372f614bd8488650daf0561",
+    "/assets/data/tiketByUser.json": "1ba9aad82ddab6722372f614bd8488650daf0561",
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/assets/iconsss/icon-128x128.png": "ef1a4809256231bccf3d3a068fe7c19150f12ff4",
+    "/assets/iconsss/icon-144x144.png": "ef1a4809256231bccf3d3a068fe7c19150f12ff4",
+    "/assets/iconsss/icon-152x152.png": "ef1a4809256231bccf3d3a068fe7c19150f12ff4",
+    "/assets/iconsss/icon-192x192.png": "ef1a4809256231bccf3d3a068fe7c19150f12ff4",
+    "/assets/iconsss/icon-384x384.png": "ef1a4809256231bccf3d3a068fe7c19150f12ff4",
+    "/assets/iconsss/icon-512x512.png": "ef1a4809256231bccf3d3a068fe7c19150f12ff4",
+    "/assets/iconsss/icon-72x72.png": "ee73ef9b03dab0ff30a67725d68c67e58cf95fb1",
+    "/assets/iconsss/icon-96x96.png": "ef1a4809256231bccf3d3a068fe7c19150f12ff4",
+    "/assets/shiba1.jpg": "1f79050140a7d6dc460995aa2ef59d9be561f8e1",
+    "/es2015-polyfills.c5dd28b362270c767b34.js": "b7a81c61d32b0b12737f0c13f45973ba391cd7f9",
+    "/favicon.ico": "3260c7f00d3626648fb7c1be51bb7db03ada7e3f",
+    "/index.html": "f6d313351fa089ffd0d477e14a81c7429634b291",
+    "/main.f9e6e5618d0d63cc5db3.js": "438612f5c6ec660509ae375baff2ff0dfc5d7c37",
+    "/polyfills.8bbb231b43165d65d357.js": "ffa449995bf2eba2ccd0a002417214f7eb75e7b5",
+    "/runtime.26209474bfa8dc87a77c.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "/shiba1.d84e1a8ed94377452dbf.jpg": "1f79050140a7d6dc460995aa2ef59d9be561f8e1",
+    "/styles.fdeecdd72bd8a2dba0b0.css": "f95b4de4e2650bbecbd3a952858ad84a8d6114a9"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}

@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
       this.respon = data;
       if (data.success){
         console.log("masuk");
-        this.auth.setLoggerdStatus(true);
+        this.auth.setLoggedStatus(true);
         this.router.navigate(['/home']);
       } else { console.log("gak bisa masuk")}
     }, error => {console.log(error," gak dapat hasil dari server")});
@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
         this.userLogin.namauser = data.namauser;
         this.userLogin.username = data.username;
         this.userLogin.status = data.status;
-        this.auth.setLoggerdStatus(this.userLogin);
+        this.auth.setLoggedStatus(this.userLogin);
         this.router.navigate(['/home']);
       } else { console.log("gak bisa masuk")}
     }, error => {console.log(error," gak dapat hasil dari server")});

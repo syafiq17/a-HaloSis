@@ -37,11 +37,12 @@ export class AuthService {
   }
 
   getUserDetail(loginData): Observable <statusLogin>{
-    console.log(loginData);
+    // console.log(loginData);
       return this.http.post<statusLogin>(this.url, loginData,{headers: this.head});
   }
 
-  setLoggerdStatus(data){
+  setLoggedStatus(data){
+    console.log(data);
     this.dataUser = data;
     this.loggedStatus=true;
     this.authG.setLogin(true);

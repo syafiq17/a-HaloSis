@@ -1,3 +1,24 @@
 .inPost-form-field {
   width: 100%;
 }
+
+.bottomRight {
+  right: 30px;
+  bottom: 80px;
+  position: fixed;
+  /*transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);*/
+  z-index: 900;
+}
+
+.filesize{
+  margin: 0 1em;
+  color: #999;
+  margin-left: 0.5em;
+}
+
+.link {
+    color:blue;
+    text-decoration:underline;
+    cursor:pointer;
+}
